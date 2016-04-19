@@ -14,14 +14,14 @@ With the [Heroku gem](http://devcenter.heroku.com/articles/heroku-command), crea
     $ cd wordpress-heroku
     $ heroku create
       Creating app... done, stack is cedar-14
-      https://morning-escarpment-15478.herokuapp.com/ | https://git.heroku.com/morning-escarpment-15478.git
+      https://your-app-url.herokuapp.com/ | https://git.heroku.com/your-app-url.git
 
 Add a database to your app
 
     $ heroku addons:create heroku-postgresql
       Creating HEROKU_POSTGRESQL_INSTANCE... done, (free)
-      Adding HEROKU_POSTGRESQL_INSTANCE to morning-escarpment-15478... done
-      Setting DATABASE_URL and restarting morning-escarpment-15478... done, v3
+      Adding HEROKU_POSTGRESQL_INSTANCE to your-app-url... done
+      Setting DATABASE_URL and restarting your-app-url... done, v3
       Database has been created and is available
        ! This database is empty. If upgrading, you can transfer
        ! data from another database with pg:copy
@@ -31,7 +31,7 @@ Promote the database (replace HEROKU_POSTGRESQL_INSTANCE with the name from the 
 
     $ heroku pg:promote HEROKU_POSTGRESQL_INSTANCE
       Ensuring an alternate alias for existing DATABASE... done, HEROKU_POSTGRESQL_COLOR
-      Promoting HEROKU_POSTGRESQL_INSTANCE to DATABASE_URL on morning-escarpment-15478... done
+      Promoting HEROKU_POSTGRESQL_INSTANCE to DATABASE_URL on your-app-url... done
 
 Create a new branch for any configuration/setup changes needed
 
@@ -75,10 +75,10 @@ Deploy to Heroku
       remote:        Done: 19.2M
       remote: -----> Launching...
       remote:        Released v1
-      remote:        https://morning-escarpment-15478.herokuapp.com/ deployed to Heroku
+      remote:        https://your-app-url.herokuapp.com/ deployed to Heroku
       remote:
       remote: Verifying deploy... done.
-      To https://git.heroku.com/morning-escarpment-15478.git
+      To https://git.heroku.com/your-app-url.git
          875b112..79186a6  production -> master
 
 After deployment WordPress has a few more steps to setup and thats it!
